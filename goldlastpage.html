@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+       
+       
+        <title>Nandhini Jewellery</title>
+  
+
+        <style>
+                            /* ===========================
+                GOOGLE FONT
+                =========================== */
+
+                *{
+                    margin:0;
+                    padding:0;
+                    box-sizing:border-box;
+                }
+
+                body{
+                    font-family:'Inter',sans-serif;
+                    background:#000;
+                }
+                /* Navbar */
+
+      .custom-nav {
+        background: rgba(0, 0, 0, 0.78);
+        padding: 6px 0;
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        color: #fff !important;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-circle {
+        width: 52px;
+        height: 52px;
+        border: 2px solid #caa64b;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #d9b458;
+        margin-right: 12px;
+        font-size: 16px;
+      }
+
+      .nav-link {
+        color: #fff !important;
+        margin: 0 12px;
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        color: #d4af37 !important;
+      }
+
+      .visit-btn {
+        border: 1px solid #d4af37;
+        color: #d4af37;
+        padding: 10px 24px;
+        border-radius: 0;
+      }
+
+      .visit-btn:hover {
+        background: #d4af37;
+        color: #111;
+      }
+
+                /* ===========================
+                VISIT STORE SECTION
+                =========================== */
+
+                .visit-store{
+                    position:relative;
+                    padding:60px 0 80px;
+                    background:url("./mainn.webp") center center/cover no-repeat;
+                    overflow:hidden;
+                }
+
+                .overlay{
+                    position:absolute;
+                    inset:0;
+                    background:rgba(90, 21, 29, 0.83);
+                }
+
+                .container{
+                    position:relative;
+                    z-index:2;
+                }
+
+                /* ===========================
+                TOP HEADING
+                =========================== */
+
+                .section-top{
+                    margin-bottom:55px;
+                }
+
+                .number-circle{
+                    margin-top: 30px;
+                    width:42px;
+                    height:42px;
+                    border:1.5px solid #d8b04d;
+                    border-radius:50%;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    color:#d8b04d;
+                    font-size:13px;
+                    font-weight:600;
+                }
+
+                .section-name{
+                     margin-top: 30px;
+                    margin-left:18px;
+                    color:#d8b04d;
+                    font-size:15px;
+                    letter-spacing:5px;
+                    font-weight:500;
+                }
+
+                .line{
+                     margin-top: 30px;
+                    flex:1;
+                    height:1px;
+                    background:#8d6335;
+                    margin-left:20px;
+                }
+
+                /* ===========================
+                MAIN HEADING
+                =========================== */
+
+                .main-heading{
+
+                    font-family:'Cormorant Garamond',serif;
+
+                    color:#fff;
+
+                    font-size:40px;
+
+                    line-height:1.1;
+
+                    font-weight:500;
+
+                    margin-bottom:40px;
+                }
+
+                /* ===========================
+                INFO BOX
+                =========================== */
+
+                .info-box{
+
+                    display:flex;
+
+                    align-items:flex-start;
+
+                    margin-bottom:28px;
+
+                }
+
+                .icon-box{
+
+                    width:42px;
+
+                    margin-right:20px;
+
+                }
+
+                .icon-box i{
+
+                    color:#e0b347;
+
+                    font-size:25px;
+
+                }
+
+                .info-box h5{
+
+                    color:#fff;
+
+                    font-size:18px;
+
+                    font-weight:600;
+
+                    margin-bottom:5px;
+
+                }
+
+                .info-box p{
+
+                    color:#d7c7c7;
+
+                    font-size:16px;
+
+                    line-height:1.7;
+
+                    margin:0;
+
+                }
+
+                /* ===========================
+                BUTTON
+                =========================== */
+
+                .direction-btn{
+
+                    margin-top:18px;
+
+                    background:#d7aa2b;
+
+                    color:#111;
+
+                    border:none;
+
+                    padding:14px 32px;
+
+                    font-size:24px;
+
+                    font-weight:600;
+
+                    transition:.3s;
+
+                }
+
+                .direction-btn:hover{
+
+                    background:#e7bc42;
+
+                    transform:translateY(-3px);
+
+                }
+
+                .map-box{
+
+                    position:relative;
+
+                    height:480px;
+
+                    border:1px solid rgba(255,255,255,.22);
+
+                    border-radius:4px;
+
+                    display:flex;
+
+                    justify-content:center;
+
+                    align-items:center;
+
+                    overflow:hidden;
+
+                }
+
+                /* Grid */
+
+                .map-box::before{
+
+                    content:"";
+
+                    position:absolute;
+
+                    inset:0;
+
+                    background-image:
+
+                    linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+
+                    linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+
+                    background-size:56px 56px;
+
+                }
+
+                .map-content{
+
+                    position:relative;
+
+                    text-align:center;
+
+                    z-index:2;
+
+                }
+
+                .map-content i{
+
+                    font-size:50px;
+
+                    color:#d8aa42;
+
+                    margin-bottom:20px;
+
+                    display:block;
+
+                }
+
+                .map-content p{
+
+                    color:#cdb8b8;
+
+                    font-size:19px;
+
+                }
+
+                /* ===========================
+                RESPONSIVE
+                =========================== */
+                @media(max-width:400px)
+        {
+            .number-circle,.section-name,.line{
+                margin-top: 75px;
+            }
+        }
+        @media (min-width:1024px) and (max-width: 1439px) 
+        {
+            .number-circle,.section-name,.line{
+                margin-top: 100px;
+            }
+        }
+
+                @media(max-width:1200px){
+
+                .main-heading{
+
+                font-size:50px;
+
+                }
+
+                .map-box{
+
+                height:420px;
+
+                }
+
+                }
+
+                @media(max-width:992px){
+
+                .main-heading{
+
+                font-size:45px;
+
+                text-align:center;
+
+                }
+
+                .section-top{
+
+                justify-content:center;
+
+                }
+
+                .info-box{
+
+                margin-bottom:24px;
+
+                }
+
+                .map-box{
+
+                margin-top:40px;
+
+                height:380px;
+
+                }
+
+                .direction-btn{
+
+                display:block;
+
+                margin:auto;
+
+                margin-top:35px;
+
+                }
+
+                }
+
+                @media(max-width:768px){
+
+                .visit-store{
+
+                padding:50px 0;
+
+                }
+
+                .main-heading{
+
+                font-size:36px;
+
+                }
+
+                .info-box p{
+
+                font-size:16px;
+
+                }
+
+                .map-box{
+
+                height:300px;
+
+                }
+
+                .map-content p{
+
+                font-size:17px;
+
+                }
+
+                .direction-btn{
+
+                width:100%;
+
+                font-size:20px;
+
+                }
+
+                }
+
+
+                body{
+    margin:0;
+    font-family:Arial, sans-serif;
+}
+
+.footer-section{
+    background:#09140d;
+    color:#d7d0c2;
+    position:relative;
+}
+
+/* Gallery */
+
+.footer-gallery img{
+    padding-top: 40px;
+    width:100%;
+    height:140px;
+    object-fit:cover;
+   
+}
+
+/* Heading */
+
+.footer-section h3{
+
+    color:#d1daaa;
+    font-size:32px;
+    font-family:Georgia, serif;
+    margin-bottom:20px;
+}
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Paragraph */
+
+.footer-section p{
+    line-height:1.8;
+    font-size:15px;
+    color:#d8d2c4;
+}
+
+/* Links */
+
+.footer-links,
+.footer-info{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-links li,
+.footer-info li{
+    margin-bottom:14px;
+}
+
+.footer-links a{
+    color:#d8d2c4;
+    text-decoration:none;
+    font-size:17px;
+}
+
+.footer-links a:hover{
+    color:#c89f3f;
+}
+
+/* Social */
+
+.social-icons a{
+    width:42px;
+    height:42px;
+    border:1px solid #8a742d;
+    border-radius:50%;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    margin-right:10px;
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#b88b2d;
+    color:#fff;
+}
+
+/* Line */
+
+hr{
+    border-top:3px solid rgba(255,255,255,.12);
+    margin-top:30px;
+    margin-bottom:20px;
+}
+
+/* Copyright */
+
+.copyright{
+    color:#8f8b82;
+    font-size:15px;
+}
+
+/* WhatsApp */
+
+.whatsapp{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    width:70px;
+    height:70px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:38px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.4);
+}
+
+.whatsapp:hover{
+    color:#fff;
+    text-decoration:none;
+}
+
+/* Mobile */
+
+@media(max-width:767px){
+
+.footer-gallery img{
+    height:80px;
+   
+}
+
+.footer-section h3{
+    font-size:26px;
+}
+
+.footer-section{
+    text-align:center;
+}
+
+.social-icons{
+    margin-bottom:20px;
+}
+}
+        
+                        
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold logo" href="#">
+          <span class="logo-circle">MSR</span>
+          Nandhini Jewellery
+        </a>
+
+         <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="./gold1.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./gold2.html">Collections</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold3.html">Purity & Trust</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold4.html">How We Work</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold5.html">Reviews</a>
+            </li>
+
+            <li class="nav-item ms-lg-3">
+              <a  class="btn visit-btn" href="./goldlastpage.html"> Book a Visit </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+       
+<section class="visit-store">
+
+<div class="overlay"></div>
+
+<div class="container">
+
+    <!-- Top Heading -->
+
+    <div class="section-top d-flex align-items-center">
+
+        <div class="number-circle">
+            05
+        </div>
+
+        <span class="section-name">
+            VISIT THE STORE
+        </span>
+
+        <div class="line"></div>
+
+    </div>
+
+    <div class="row align-items-center gy-5">
+
+        <!-- Left -->
+
+        <div class="col-lg-5">
+
+            <h1 class="main-heading">
+                Come see the weight for yourself
+            </h1>
+
+
+            <!-- Address -->
+
+            <div class="info-box d-flex">
+
+                <div class="icon-box">
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+
+                <div>
+
+                    <h5>Address</h5>
+
+                    <p>
+                        5/91-1, Gandhi Booma circle  Main Road,
+                        Porumamilla,
+                        Kadapa (dt),
+                        Andhra Pradesh 516193.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hours -->
+
+            <div class="info-box d-flex">
+
+                <div class="icon-box">
+                    <i class="bi bi-clock-fill"></i>
+                </div>
+
+                <div>
+
+                    <h5>Hours</h5>
+
+                    <p>
+                        Mon–Sat, 9:30 AM – 8:30 PM
+                        · Sunday, 11:00 AM – 6:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="info-box d-flex">
+
+                <div class="icon-box">
+                    <i class="bi bi-telephone-fill"></i>
+                </div>
+
+                <div>
+
+                    <h5>Phone</h5>
+
+                    <p>
+                        +91 9640559757
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- WhatsApp -->
+
+            <div class="info-box d-flex">
+
+                <div class="icon-box">
+                    <i class="bi bi-whatsapp"></i>
+                </div>
+
+                <div>
+
+                    <h5>WhatsApp Catalog</h5>
+
+                    <p>
+                        Message us for today's rate card
+                        and new arrivals
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button class="direction-btn">
+                Get Directions
+            </button>
+
+        </div>
+
+
+        <!-- Right -->
+
+        <div class="col-lg-7">
+
+            <div class="map-box">
+
+                <div class="map-content">
+
+                    <i class="bi bi-map-fill"></i>
+
+                    <p>
+                        Map preview — connect a Google Maps embed here with your store's coordinates
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+<footer class="footer-section">
+
+    <!-- Top Images -->
+    <div class="container-fluid p-0">
+        <div class="row no-gutters footer-gallery">
+           <div class="col-6 col-md-2">
+                <img src="./down1.avif" class="img-fluid" alt="down">
+            </div>
+            <div class="col-6 col-md-2">
+                <img src="./stttud.png" class="img-fluid" alt="stud">
+            </div>
+            <div class="col-6 col-md-2">
+                <img src="./chains.jpg" class="img-fluid" alt="chains">
+            </div>
+            <div class="col-6 col-md-2">
+                <img src="./bangle.webp" class="img-fluid" alt="bangle">
+            </div>
+            <div class="col-6 col-md-2">
+                <img src="./coins.jpg" class="img-fluid" alt="coins">
+            </div>
+           <div class="col-6 col-md-2">
+                <img src="./last.webp" class="img-fluid" alt="rings">
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h3>Nandhini Jwellery</h3>
+
+                <p>
+                    A family jewellery house trading in BIS-hallmarked gold
+                    since 1978. Purity you can verify, service you can return to.
+                </p>
+
+                <div class="social-icons mt-4">
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h3>Quick Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Purity & Trust</a></li>
+                    <li><a href="#">How We Work</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+
+            <!-- Store -->
+            <div class="col-lg-4 col-md-6">
+                <h3>Store Info</h3>
+
+                <ul class="footer-info">
+                    <li>Gandhi bomma circle Main center Porumamilla, Kadapa (dt), Andhra Pradesh</li>
+                    <li>Mon–Sat 9:30 AM – 8:30 PM</li>
+                    <li>+91 9640559757</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="text-center copyright">
+            © 2026 Nandhini Jwellery. Rates displayed are indicative and updated
+            at store opening daily. All designs shown are illustrative.
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- WhatsApp -->
+<a href="#" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+          
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>   

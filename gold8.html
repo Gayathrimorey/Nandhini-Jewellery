@@ -1,0 +1,477 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body{
+                background:#06120b;
+                font-family:'Poppins',sans-serif;
+            }
+            /* Navbar */
+
+      .custom-nav {
+        background: rgba(0, 0, 0, 0.78);
+        padding: 6px 0;
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        color: #fff !important;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-circle {
+        width: 52px;
+        height: 52px;
+        border: 2px solid #caa64b;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #d9b458;
+        margin-right: 12px;
+        font-size: 16px;
+      }
+
+      .nav-link {
+        color: #fff !important;
+        margin: 0 12px;
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        color: #d4af37 !important;
+      }
+
+      .visit-btn {
+        border: 1px solid #d4af37;
+        color: #d4af37;
+        padding: 10px 24px;
+        border-radius: 0;
+      }
+
+      .visit-btn:hover {
+        background: #d4af37;
+        color: #111;
+      }
+
+            .piece-section{
+                background:#07140d;
+                color:#fff;
+            }
+
+            .image-side{
+                position: relative;
+                overflow: hidden;
+            }
+
+            .product-image{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .content-side{
+                padding: 45px 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .sub-title{
+
+                color:#b99b44;
+
+                letter-spacing:5px;
+
+                font-size:13px;
+
+                text-transform:uppercase;
+
+                margin-bottom:20px;
+            }
+
+            h1{
+
+                font-family:'Cormorant Garamond',serif;
+
+                font-size:62px;
+
+                color:#fff;
+
+                margin-bottom:20px;
+            }
+
+            .desc{
+
+                color:#e2e19e;
+
+                line-height:2;
+
+                font-size:22px;
+
+                margin-bottom:40px;
+            }
+
+            hr{
+
+                border-color:#715d25;
+
+                margin:30px 0;
+            }
+
+            .spec-row{
+
+                display:flex;
+
+                justify-content:space-between;
+
+                margin-bottom:23px;
+            }
+
+            .spec-row span{
+
+                text-transform:uppercase;
+
+                letter-spacing:3px;
+
+                color:#b8983e;
+
+                font-size:15px;
+            }
+
+            .value{
+
+                color:#d9b863;
+
+                font-size:30px;
+
+                font-family:'Cormorant Garamond',serif;
+
+                font-weight:bold;
+            }
+
+            .note{
+
+                color:#d6d6d6;
+
+                line-height:1.8;
+
+                margin-bottom:32px;
+
+                font-size:18px;
+            }
+
+            .reserve-btn{
+
+                background:#c8a227;
+
+                color:#000;
+
+                padding:16px 40px;
+
+                font-size:22px;
+
+                border-radius:3px;
+
+                width:250px;
+
+                margin-bottom:35px;
+            }
+
+            .reserve-btn:hover{
+
+                background:#d9b74a;
+            }
+
+            .thumbs{
+
+                display:flex;
+
+                gap:15px;
+            }
+
+            .thumbs img{
+
+                width:100px;
+
+                height:100px;
+
+                object-fit:cover;
+
+                border:2px solid #846b28;
+
+                cursor:pointer;
+
+                transition:.3s;
+            }
+
+            .thumbs img:hover{
+
+                transform:scale(1.08);
+
+                border-color:#d4b048;
+            }
+
+            @media(max-width:991px){
+
+            .image-side{
+
+            min-height:400px;
+
+            }
+
+            .product-image{
+
+            height:400px;
+            }
+
+            .content-side{
+
+            padding:30px 20px;
+            }
+
+            h1{
+
+            font-size:42px;
+            }
+            .desc{
+
+            font-size:16px;
+            }
+
+            .value{
+
+            font-size:22px;
+            }
+
+            .reserve-btn{
+
+            width:100%;
+            }
+
+            .thumbs{
+
+            justify-content:center;
+            }
+            }
+
+    </style>
+     
+  
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold logo" href="#">
+          <span class="logo-circle">MSR</span>
+          Nandhini Jewellery
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Collections</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Purity & Trust</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">How We Work</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Reviews</a>
+            </li>
+
+            <li class="nav-item ms-lg-3">
+              <a href="#" class="btn visit-btn"> Book a Visit </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+            <section class="piece-section">
+
+            <div class="container-fluid p-0">
+
+            <div class="row g-0">
+
+            <!-- Left Image -->
+
+            <div class="col-lg-6 image-side">
+
+            <img src="./a girl.jpg" class="img-fluid product-image" id="mainImg">
+
+
+
+            </div>
+
+            <!-- Right Content -->
+
+            <div class="col-lg-6 content-side">
+
+            <span class="sub-title">
+            PIECE OF THE MONTH
+            </span>
+
+            <h1>
+            The Rajmahal Necklace
+            </h1>
+
+            <p class="desc">
+            A hand-finished 22K collar necklace with antique temple detailing,
+            built for the bride who wants heritage weight without heritage bulk.
+            </p>
+
+            <hr>
+
+            <div class="spec-row">
+
+            <div>
+            <span>Purity</span>
+            </div>
+
+            <div class="value">
+            22K • Hallmark 916
+            </div>
+
+            </div>
+
+            <div class="spec-row">
+
+            <div>
+            <span>Weight</span>
+            </div>
+
+            <div class="value">
+            118 grams (approx.)
+            </div>
+
+            </div>
+
+            <div class="spec-row">
+
+            <div>
+            <span>Starting At</span>
+            </div>
+
+            <div class="value">
+            ₹8,71,000*
+            </div>
+
+            </div>
+
+            <hr>
+
+            <p class="note">
+            *Price varies with the day's gold rate and final weight.
+            In-store trial recommended.
+            </p>
+
+            <a href="#" class="btn reserve-btn">
+            Reserve a Trial
+            </a>
+
+            <div class="thumbs">
+
+            <img src="./gold1.jpg"data-target="#small3" data-toggle="modal" onmouseover="disp(this)">
+
+            <img src="./bangless.webp"data-target="#small4" data-toggle="modal" onmouseover="disp(this)">
+
+            <img src="./chain11.jpg" data-target="#small5" data-toggle="modal" onmouseover="disp(this)">
+
+            <img src="./ear.jpg"data-target="#small6" data-toggle="modal" onmouseover="disp(this)">
+
+            </div>
+
+            </div>
+
+            </div>
+
+            </div>
+                <div class="modal" id="small6">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                        <div class="modal-body">
+                    <img src="./ear.jpg" width="100%" height="100%">
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                 <div class="modal" id="small5">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                        <div class="modal-body">
+                    <img src="./chain11.jpg" width="100%" height="100%">
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                 <div class="modal" id="small4">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                        <div class="modal-body">
+                    <img src="./bangless.webp" width="100%" height="100%">
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal" id="small3">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                        <div class="modal-body">
+                    <img src="./gold1.jpg" width="100%" height="100%">
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                
+
+            </section>
+
+<script>
+  function disp(img1){
+    document.getElementById("mainImg").src= img1.src;
+  }
+
+</script>
+   
+   
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>  
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+
+    </body>
+</html>

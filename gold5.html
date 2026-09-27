@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <style>
+            *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#F6EEDB;
+    font-family:'Cormorant Garamond', serif;
+}
+/* Navbar */
+
+      .custom-nav {
+        background: rgba(0, 0, 0, 0.78);
+        padding: 6px 0;
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        color: #fff !important;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-circle {
+        width: 52px;
+        height: 52px;
+        border: 2px solid #caa64b;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #d9b458;
+        margin-right: 12px;
+        font-size: 16px;
+      }
+
+      .nav-link {
+        color: #fff !important;
+        margin: 0 12px;
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        color: #d4af37 !important;
+      }
+
+      .visit-btn {
+        border: 1px solid #d4af37;
+        color: #d4af37;
+        padding: 10px 24px;
+        border-radius: 0;
+      }
+
+      .visit-btn:hover {
+        background: #d4af37;
+        color: #111;
+      }
+
+.container{
+    width:90%;
+    max-width:1600px;
+    margin:auto;
+}
+
+.testimonial-section{
+    padding:75px 0;
+    background:#F6EEDB;
+}
+
+
+
+.heading{
+    display:flex;
+    align-items:center;
+    margin-bottom:55px;
+}
+
+.circle{
+    margin-top: 30px;
+    width:42px;
+    height:42px;
+    border:1.5px solid #A67817;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#A67817;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+}
+
+.heading h5{
+     margin-top: 30px;
+    margin-left:20px;
+    color:#9D6E13;
+    font-size:15px;
+    letter-spacing:7px;
+    font-weight:400;
+    font-family:'IBM Plex Mono', monospace;
+}
+
+.line{
+     margin-top: 30px;
+    flex:1;
+    height:1px;
+    background:#D8C483;
+    margin-left:28px;
+}
+
+
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+
+    background:#f4eee1;
+    border:1px solid #e2c479;
+
+    padding:45px 40px 38px;
+
+    min-height:262px;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.stars{
+    color:#D39A00;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:28px;
+}
+
+.review{
+
+    font-size:23px;
+    line-height:1.38;
+    font-style:italic;
+    color:#3F2F1B;
+
+    margin-bottom:45px;
+}
+
+.author{
+
+    margin-top:auto;
+
+    color:#9D6E13;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+    font-family:'IBM Plex Mono', monospace;
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+    .testimonial-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .heading{
+        flex-wrap:wrap;
+        gap:2x;
+    }
+
+   
+
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .review{
+        font-size:20px;
+    }
+
+}
+       
+</style>
+    </head>
+<body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold logo" href="#">
+          <span class="logo-circle">MSR</span>
+          Nandhini Jewellery
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="./gold1.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./gold2.html">Collections</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold3.html">Purity & Trust</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold4.html">How We Work</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold5.html">Reviews</a>
+            </li>
+
+            <li class="nav-item ms-lg-3">
+              <a  class="btn visit-btn" href="./goldlastpage.html"> Book a Visit </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<section class="testimonial-section">
+
+    <div class="container">
+
+        <div class="heading">
+            <div class="circle">04</div>
+
+            <h5>FROM OUR CUSTOMERS</h5>
+
+            <div class="line"></div>
+        </div>
+
+        <div class="testimonial-grid">
+
+            <div class="card">
+
+                <div class="stars">★★★★★</div>
+
+                <p class="review">
+                    They showed me the hallmark and let me check it on my own phone before I paid.
+                    That alone earned my trust.
+                </p>
+
+                <p class="author">— Hazeera ., Hyderabad</p>
+
+            </div>
+
+            <div class="card">
+
+                <div class="stars">★★★★★</div>
+
+                <p class="review">
+                    Bought my daughter's bridal set here. The making charges were explained line by line,
+                    no surprises at billing.
+                </p>
+
+                <p class="author">— Gayathri M., Porumamilla</p>
+
+            </div>
+
+            <div class="card">
+
+                <div class="stars">★★★★★</div>
+
+                <p class="review">
+                    Exchanged old jewellery for new at a fair rate, and got the price difference in writing
+                    before I agreed to anything.
+                </p>
+
+                <p class="author">— Lakshmi M., Kadapa</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>  
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
+
+    

@@ -1,0 +1,1414 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #111;
+      }
+
+      /* Navbar */
+
+      .custom-nav {
+        background: rgba(0, 0, 0, 0.78);
+        padding: 6px 0;
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        color: #fff !important;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-circle {
+        width: 52px;
+        height: 52px;
+        border: 2px solid #caa64b;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #d9b458;
+        margin-right: 12px;
+        font-size: 16px;
+      }
+
+      .nav-link {
+        color: #fff !important;
+        margin: 0 12px;
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        color: #d4af37 !important;
+      }
+
+      .visit-btn {
+        border: 1px solid #d4af37;
+        color: #d4af37;
+        padding: 10px 24px;
+        border-radius: 0;
+      }
+
+      .visit-btn:hover {
+        background: #d4af37;
+        color: #111;
+      }
+
+      /* Hero */
+
+      .hero {
+        height: 100vh;
+        background: url("./mainn.webp") center center/cover no-repeat;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(67, 80, 59, 0.6);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        color: #fdfafa;
+      }
+
+      .top-text {
+        margin-top: 0px;
+        letter-spacing: 5px;
+        color: #100f10;
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding-top: 80px;
+      }
+
+      /* Badge */
+
+      .badge22 {
+        width: 170px;
+        height: 170px;
+        border: 4px solid #d4af37;
+        border-radius: 50%;
+        margin: 0 auto 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .inner-circle {
+        width: 145px;
+        height: 145px;
+        border: 2px solid #d4af37;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .inner-circle h2 {
+        color: #d4af37;
+        font-size: 52px;
+        font-family: "Playfair Display", serif;
+        margin-bottom: 5px;
+      }
+
+      .inner-circle span {
+        color: #d4af37;
+        font-size: 13px;
+        letter-spacing: 2px;
+      }
+
+      /* Heading */
+
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 72px;
+        line-height: 1.1;
+        font-weight: 700;
+        margin-bottom: 25px;
+      }
+
+      .hero h1 span {
+        color: #d4af37;
+        font-style: italic;
+      }
+
+      .hero-para {
+        max-width: 700px;
+        margin: auto;
+        font-size: 20px;
+        line-height: 1.8;
+        color: #f1f1f1;
+      }
+
+      /* Buttons */
+
+      .btn-gold {
+        background: #d4af37;
+        color: #111;
+        padding: 15px 38px;
+        border-radius: 0;
+        font-weight: 600;
+      }
+
+      .btn-gold:hover {
+        background: #bf9728;
+        color: #111;
+      }
+
+      .btn-outline-light {
+        padding: 15px 38px;
+        border-radius: 0;
+      }
+
+      /* Responsive */
+
+      @media (max-width: 991px) {
+        .hero h1 {
+          font-size: 50px;
+        }
+
+        .hero-para {
+          font-size: 18px;
+        }
+
+        .logo {
+          font-size: 24px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          padding: 120px 15px;
+          height: auto;
+        }
+
+        .hero h1 {
+          font-size: 38px;
+        }
+
+        .hero-para {
+          font-size: 16px;
+        }
+
+        .badge22 {
+          width: 130px;
+          height: 130px;
+        }
+
+        .inner-circle {
+          width: 108px;
+          height: 108px;
+        }
+
+        .inner-circle h2 {
+          font-size: 34px;
+        }
+
+        .top-text {
+          font-size: 11px;
+          letter-spacing: 2px;
+        }
+
+        .btn-gold,
+        .btn-outline-light {
+          display: block;
+         width: 100% !important;
+        margin: 10px 0 !important;
+        }
+      }
+
+
+
+            *{
+          margin:0;
+          padding:0;
+          box-sizing:border-box;
+      }
+
+      body{
+          font-family:'Roboto',sans-serif;
+      }
+
+      /* Background */
+
+      .hero-section{
+
+          background:url("./coins.jpg") center center/cover no-repeat;
+
+          position:relative;
+
+          min-height:200px;
+
+      }
+
+      .hero-section::before{
+
+          content:"";
+
+          position:absolute;
+
+          inset:0;
+
+          background:rgba(37, 38, 36, 0.62);
+          
+
+      }
+
+      /* Rate Bar */
+.rate-bar{
+    position: relative;
+    z-index: 2;
+    background: #7b1e2b;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+.rate-scroll{
+    display: inline-flex;
+    gap: 80px;
+    white-space: nowrap;
+    animation: scrollLeft 20s linear infinite;
+}
+
+
+.rate-scroll span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.rate-scroll:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scrollLeft{
+    from{
+        transform: translateX(20%);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+      /* Stats */
+
+      .stats{
+
+          position:relative;
+
+          z-index:2;
+
+          padding-top:40px;
+
+      }
+
+      .stat-box{
+
+          padding:20px 10px;
+
+      }
+
+      .stat-box h2{
+
+          color:#d6ab4d;
+
+          font-size:62px;
+
+          font-family:'Cinzel',serif;
+
+          font-weight:700;
+
+          margin-bottom:8px;
+
+      }
+
+      .stat-box h2 span{
+
+          font-size:35px;
+
+          vertical-align:top;
+
+      }
+
+      .stat-box p{
+
+          color:#f4f4f4;
+
+          font-size:18px;
+
+          letter-spacing:4px;
+
+          font-family:'Cinzel',serif;
+
+      }
+
+      /* Responsive */
+
+      @media(max-width:768px){
+
+      .stat-box{
+
+      margin-bottom:25px;
+
+      }
+
+      .stat-box h2{
+
+      font-size:45px;
+
+      }
+
+      .stat-box p{
+
+      font-size:13px;
+
+      letter-spacing:2px;
+
+      }
+
+      }
+      /*peace of the month css*/
+       body{
+                background:#06120b;
+                font-family:'Poppins',sans-serif;
+            }
+            /* Navbar */
+
+      .custom-nav {
+        background: rgba(0, 0, 0, 0.78);
+        padding: 6px 0;
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        color: #fff !important;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-circle {
+        width: 52px;
+        height: 52px;
+        border: 2px solid #caa64b;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #d9b458;
+        margin-right: 12px;
+        font-size: 16px;
+      }
+
+      .nav-link {
+        color: #fff !important;
+        margin: 0 12px;
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        color: #d4af37 !important;
+      }
+
+      .visit-btn {
+        border: 1px solid #d4af37;
+        color: #d4af37;
+        padding: 10px 24px;
+        border-radius: 0;
+      }
+
+      .visit-btn:hover {
+        background: #d4af37;
+        color: #111;
+      }
+
+            .piece-section{
+                background:#07140d;
+                color:#fff;
+            }
+
+            .image-side{
+                position: relative;
+                overflow: hidden;
+                
+            }
+
+            .product-image{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .content-side{
+                padding: 45px 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .sub-title{
+
+                color:#b99b44;
+
+                letter-spacing:5px;
+
+                font-size:30px;
+
+                text-transform:uppercase;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                text-align: center;
+                font-family:'Cormorant Garamond',serif;
+            }
+
+            h1{
+
+                font-family:'Cormorant Garamond',serif;
+
+                font-size:62px;
+
+                color:#fff;
+
+                margin-bottom:20px;
+            }
+
+            .desc{
+
+                color:#e2e19e;
+
+                line-height:2;
+
+                font-size:22px;
+
+                margin-bottom:40px;
+            }
+
+            hr{
+
+                border-color:#715d25;
+
+                margin:30px 0;
+            }
+
+            .spec-row{
+
+                display:flex;
+
+                justify-content:space-between;
+
+                margin-bottom:23px;
+            }
+
+            .spec-row span{
+
+                text-transform:uppercase;
+
+                letter-spacing:3px;
+
+                color:#b8983e;
+
+                font-size:15px;
+            }
+
+            .value{
+
+                color:#d9b863;
+
+                font-size:30px;
+
+                font-family:'Cormorant Garamond',serif;
+
+                font-weight:bold;
+            }
+
+            .note{
+
+                color:#d6d6d6;
+
+                line-height:1.8;
+
+                margin-bottom:32px;
+
+                font-size:18px;
+            }
+
+            .reserve-btn{
+
+                background:#c8a227;
+
+                color:#000;
+
+                padding:16px 40px;
+
+                font-size:22px;
+
+                border-radius:3px;
+
+                width:250px;
+
+                margin-bottom:35px;
+            }
+
+            .reserve-btn:hover{
+
+                background:#d9b74a;
+            }
+
+            .thumbs{
+
+                display:flex;
+
+                gap:15px;
+            }
+
+            .thumbs img{
+
+                width:100px;
+
+                height:100px;
+
+                object-fit:cover;
+
+                border:2px solid #846b28;
+
+                cursor:pointer;
+
+                transition:.3s;
+            }
+
+            .thumbs img:hover{
+
+                transform:scale(1.08);
+
+                border-color:#d4b048;
+            }
+
+            @media(max-width:991px){
+
+            .image-side{
+
+            min-height:400px;
+
+            }
+
+            .product-image{
+
+            height:400px;
+            }
+
+            .content-side{
+
+            padding:30px 20px;
+            }
+
+            h1{
+
+            font-size:42px;
+            }
+            .desc{
+
+            font-size:16px;
+            }
+
+            .value{
+
+            font-size:22px;
+            }
+
+            .reserve-btn{
+
+            width:100%;
+            }
+
+            .thumbs{
+
+            justify-content:center;
+            }
+            }
+            /* =========================================
+   LUXURY PIECE OF THE MONTH
+========================================= */
+
+.sub-title {
+    position: relative;
+    background:
+        radial-gradient(circle at center,
+        rgba(176, 138, 57, 0.12) 0%,
+        transparent 45%),
+        #06150f;
+
+    color: #d4a83c;
+    padding: 18px 20px 10px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   MAIN TITLE BOX
+========================================= */
+
+.title-decoration {
+    position: relative;
+
+    min-height: 95px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid #c89b32;
+    border-bottom: 1px solid #c89b32;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(200,155,50,0.08),
+            transparent
+        );
+
+    box-shadow:
+        0 0 15px rgba(200,155,50,0.08),
+        inset 0 0 20px rgba(200,155,50,0.04);
+}
+
+
+/* Inner border */
+
+.title-decoration::before {
+    content: "";
+
+    position: absolute;
+
+    top: 7px;
+    bottom: 7px;
+    left: 8px;
+    right: 8px;
+
+    border-top: 1px solid rgba(200,155,50,0.35);
+    border-bottom: 1px solid rgba(200,155,50,0.35);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.title-text {
+    position: relative;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(25px, 3.2vw, 43px);
+
+    font-weight: 500;
+
+    letter-spacing: 6px;
+
+    color: #d4a83c;
+
+    text-align: center;
+
+    z-index: 3;
+
+    text-shadow:
+        0 0 5px rgba(212,168,60,0.6),
+        0 0 15px rgba(212,168,60,0.25);
+
+    transition: 0.4s;
+}
+
+
+/* Elegant hover */
+
+.title-decoration:hover .title-text {
+    letter-spacing: 9px;
+
+    text-shadow:
+        0 0 8px rgba(212,168,60,0.8),
+        0 0 20px rgba(212,168,60,0.35);
+}
+
+
+/* =========================================
+   SIDE DECORATIVE STARS
+========================================= */
+
+.side-stars {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #c89b32;
+
+    font-size: 13px;
+
+    letter-spacing: 8px;
+
+    white-space: nowrap;
+
+    opacity: 0.9;
+}
+
+
+/* Left */
+
+.left-stars {
+    left: 25px;
+}
+
+
+/* Right */
+
+.right-stars {
+    right: 25px;
+}
+
+
+/* =========================================
+   ORNAMENTS BESIDE TITLE
+========================================= */
+
+.title-decoration::after {
+    content: "❧";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -18px;
+
+    transform: translateX(-50%);
+
+    width: 55px;
+
+    height: 32px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #06150f;
+
+    color: #d4a83c;
+
+    font-size: 28px;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   DECORATIVE LINE
+========================================= */
+
+.title-line {
+    position: relative;
+
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* Main horizontal line */
+
+.title-line::before {
+    content: "";
+
+    position: absolute;
+
+    left: 5%;
+    right: 5%;
+
+    top: 50%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #b08a39 15%,
+            #d4a83c 50%,
+            #b08a39 85%,
+            transparent
+        );
+}
+
+
+/* Center decoration */
+
+.title-line span {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 150px;
+
+    padding: 5px 25px;
+
+    background: #06150f;
+
+    color: #d4a83c;
+
+    font-size: 25px;
+
+    z-index: 2;
+
+    letter-spacing: 5px;
+}
+
+
+/* =========================================
+   DIAMOND DECORATION
+========================================= */
+
+.title-line span::before,
+.title-line span::after {
+    content: "";
+
+    width: 9px;
+    height: 9px;
+
+    position: absolute;
+
+    background: #d4a83c;
+
+    transform: rotate(45deg);
+
+    box-shadow:
+        0 0 8px rgba(212,168,60,0.5);
+}
+
+
+.title-line span::before {
+    left: 0;
+}
+
+
+.title-line span::after {
+    right: 0;
+}
+
+
+/* =========================================
+   GOLD SHIMMER
+========================================= */
+
+.title-decoration::after {
+    animation: goldGlow 3s infinite ease-in-out;
+}
+
+
+@keyframes goldGlow {
+
+    0% {
+        text-shadow:
+            0 0 5px rgba(212,168,60,0.3);
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px rgba(212,168,60,0.9),
+            0 0 20px rgba(212,168,60,0.4);
+    }
+
+    100% {
+        text-shadow:
+            0 0 5px rgba(212,168,60,0.3);
+    }
+}
+
+
+/* =========================================
+   SMALL GOLD DOTS
+========================================= */
+
+.title-decoration .left-stars::before {
+    content: "•";
+    margin-right: 10px;
+
+    color: #d4a83c;
+}
+
+.title-decoration .right-stars::after {
+    content: "•";
+    margin-left: 10px;
+
+    color: #d4a83c;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .sub-title {
+        padding: 10px 10px 5px;
+    }
+
+    .title-decoration {
+        min-height: 75px;
+    }
+
+    .title-text {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+
+    .side-stars {
+        display: none;
+    }
+
+    .title-decoration::before {
+        left: 5px;
+        right: 5px;
+    }
+
+    .title-line {
+        height: 35px;
+    }
+
+    .title-line::before {
+        left: 3%;
+        right: 3%;
+    }
+
+    .title-line span {
+        font-size: 19px;
+        min-width: 110px;
+        padding: 4px 15px;
+    }
+}
+              /* end peace of month*/
+      
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold logo" href="#">
+          <span class="logo-circle">MSR</span>
+          Nandhini Jewellery
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="./gold1.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./gold2.html">Collections</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold3.html">Purity & Trust</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold4.html">How We Work</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold5.html">Reviews</a>
+            </li>
+
+            <li class="nav-item ms-lg-3">
+              <a  class="btn visit-btn" href="./goldlastpage.html"> Book a Visit </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero">
+      <div class="overlay"></div>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center hero-content">
+            <p class="top-text">
+              BIS HALLMARKED • EST. FAMILY TRADE SINCE 1994
+            </p>
+
+            <div class="badge22">
+              <div class="inner-circle">
+                <h2>22K</h2>
+
+                <span>HALLMARK 916</span>
+              </div>
+            </div>
+
+            <h1>
+              Gold that carries
+              <span>proof</span>, not just promise
+            </h1>
+
+            <p class="hero-para">
+              Every piece at Nandhini is hallmarked, weighed in front of you,
+              and billed at the day's transparent rate — from the first bangle
+              you buy to the one you pass down.
+
+              <div class="mt-4">
+              <a href="./gold2.html" class="btn btn-gold"> Browse Collections </a>
+
+              <a href="./goldlastpage.html" class="btn btn-outline-light ms-3">
+                Visit Our Store
+              </a>
+            </div>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+<!-- Hero Section -->
+<section class="hero-section">
+
+    <!-- Gold Rate Bar -->
+    <div class="rate-bar">
+    <div class="rate-scroll">
+        <span>Rates updated daily at store opening · Indicative only</span>
+
+        <span>22K GOLD (10g) ₹ 68,450 ▲ 0.6%</span>
+
+        <span>24K GOLD (10g) ₹ 74,690 ▲ 0.5%</span>
+
+        <span>18K GOLD (10g) ₹ 51,980 ▼ 0.2%</span>
+
+        <span>SILVER (1kg) ₹ 92,300 ▲ 1.1%</span>
+
+        <!-- Duplicate for continuous scrolling -->
+        <span>Rates updated daily at store opening · Indicative only</span>
+
+        <span>22K GOLD (10g) ₹ 68,450 ▲ 0.6%</span>
+
+        <span>24K GOLD (10g) ₹ 74,690 ▲ 0.5%</span>
+
+        <span>18K GOLD (10g) ₹ 51,980 ▼ 0.2%</span>
+
+        <span>SILVER (1kg) ₹ 92,300 ▲ 1.1%</span>
+    </div>
+</div>
+
+    <!-- Stats -->
+    <div class="container stats">
+
+        <div class="row text-center">
+
+            <div class="col-md-3 col-6 stat-box">
+                <h2>47<span>+</span></h2>
+                <p>YEARS OF TRADE</p>
+            </div>
+
+            <div class="col-md-3 col-6 stat-box">
+                <h2>916</h2>
+                <p>HALLMARK STANDARD</p>
+            </div>
+
+            <div class="col-md-3 col-6 stat-box">
+                <h2>12k<span>+</span></h2>
+                <p>FAMILIES SERVED</p>
+            </div>
+
+            <div class="col-md-3 col-6 stat-box">
+                <h2>100%</h2>
+                <p>CERTIFIED PURITY</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+ <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold logo" href="#">
+          <span class="logo-circle">MSR</span>
+          Nandhini Jewellery
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="./gold1.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./gold2.html">Collections</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold3.html">Purity & Trust</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold4.html">How We Work</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./gold5.html">Reviews</a>
+            </li>
+
+            <li class="nav-item ms-lg-3">
+              <a  class="btn visit-btn" href="./goldlastpage.html"> Book a Visit </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid p-0 sub-title">
+
+    <div class="title-decoration">
+
+        <span class="side-stars left-stars">
+            ✦ ✦ ✦ ✦ ✦ ✦   ❧
+        </span>
+
+        <span class="title-text">
+            PIECE OF THE MONTH
+        </span>
+
+        <span class="side-stars right-stars">
+             ❧ ✦ ✦ ✦ ✦ ✦ ✦   
+        </span>
+
+    </div>
+
+
+    <div class="title-line">
+
+        <span>
+            ❧ ✦ ❧
+        </span>
+
+    </div>
+
+</div>
+     
+
+            <section class="piece-section">
+
+            <div class="container-fluid p-0">
+
+            <div class="row g-0">
+
+            <!-- Left Image -->
+
+            <div class="col-lg-6 image-side">
+
+            <img src="./a girl.jpg" class="img-fluid product-image" id="mainImg">
+
+
+
+            </div>
+
+            <!-- Right Content -->
+
+            <div class="col-lg-6 content-side">
+
+            
+            <h1>
+            The Rajmahal Necklace
+            </h1>
+
+            <p class="desc">
+            A hand-finished 22K collar necklace with antique temple detailing,
+            built for the bride who wants heritage weight without heritage bulk.
+            </p>
+
+            <hr>
+
+            <div class="spec-row">
+
+            <div>
+            <span>Purity</span>
+            </div>
+
+            <div class="value">
+            22K • Hallmark 916
+            </div>
+
+            </div>
+
+            <div class="spec-row">
+
+            <div>
+            <span>Weight</span>
+            </div>
+
+            <div class="value">
+            118 grams (approx.)
+            </div>
+
+            </div>
+
+            <div class="spec-row">
+
+            <div>
+            <span>Starting At</span>
+            </div>
+
+            <div class="value">
+            ₹8,71,000*
+            </div>
+
+            </div>
+
+            <hr>
+
+            <p class="note">
+            *Price varies with the day's gold rate and final weight.
+            In-store trial recommended.
+            </p>
+
+            <a href="#" class="btn reserve-btn">
+            Reserve a Trial
+            </a>
+
+            <div class="thumbs">
+
+            <img src="./gold1.jpg"data-target="#small3" data-toggle="modal" onmouseover="disp(this)">
+
+            <img src="./bangless.webp"data-target="#small4" data-toggle="modal" onmouseover="disp(this)">
+
+            <img src="./chain11.jpg" data-target="#small5" data-toggle="modal" onmouseover="disp(this)">
+
+            <img src="./ear.jpg"data-target="#small6" data-toggle="modal" onmouseover="disp(this)">
+
+            </div>
+
+            </div>
+
+            </div>
+
+            </div>
+                <div class="modal" id="small6">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                        <div class="modal-body">
+                    <img src="./ear.jpg" width="100%" height="100%">
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                 <div class="modal" id="small5">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                        <div class="modal-body">
+                    <img src="./chain11.jpg" width="100%" height="100%">
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                 <div class="modal" id="small4">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                        <div class="modal-body">
+                    <img src="./bangless.webp" width="100%" height="100%">
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal" id="small3">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                        <div class="modal-body">
+                    <img src="./gold1.jpg" width="100%" height="100%">
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                
+
+            </section>
+
+<script>
+  function disp(img1){
+    document.getElementById("mainImg").src= img1.src;
+  }
+
+</script>
+   
+   
+    
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
